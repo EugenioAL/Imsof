@@ -19,4 +19,4 @@ run:
 	./main
 
 clear:
-	rm -rf *.o *~ prog
+	rm -rf *.o *~ main
