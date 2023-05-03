@@ -9,10 +9,10 @@ main: main.o hello.o bye.o
 main.o: main.cpp hello.cpp bye.cpp
 	$(CC) -o main.o main.cpp $(CFLAGS)
 
-hello.o: hello.cpp c_libs.h
+hello.o: hello.cpp c_libs.hpp
 	$(CC) -o hello.o hello.cpp $(CFLAGS)
 
-bye.o: bye.cpp c_libs.h
+bye.o: bye.cpp c_libs.hpp
 	$(CC) -o bye.o bye.cpp $(CFLAGS)
 
 run:
