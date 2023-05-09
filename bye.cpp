@@ -1,4 +1,4 @@
-#include "c_libs.h"
+#include "c_libs.hpp"
 
 void bye(){
     cout << "Bye!\n";
