@@ -58,9 +58,9 @@
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>90</red>
-        <green>213</green>
-        <blue>240</blue>
+        <red>84</red>
+        <green>98</green>
+        <blue>90</blue>
        </color>
       </brush>
      </colorrole>
@@ -105,9 +105,9 @@
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>90</red>
-        <green>213</green>
-        <blue>240</blue>
+        <red>84</red>
+        <green>98</green>
+        <blue>90</blue>
        </color>
       </brush>
      </colorrole>
@@ -143,18 +143,18 @@
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>90</red>
-        <green>213</green>
-        <blue>240</blue>
+        <red>84</red>
+        <green>98</green>
+        <blue>90</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>90</red>
-        <green>213</green>
-        <blue>240</blue>
+        <red>84</red>
+        <green>98</green>
+        <blue>90</blue>
        </color>
       </brush>
      </colorrole>
@@ -165,7 +165,8 @@
    <string>Imsof</string>
   </property>
   <property name="windowIcon">
-   <iconset theme="applications-graphics"/>
+   <iconset theme="applications-graphics">
+    <normaloff>.</normaloff>.</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
@@ -219,10 +220,10 @@
    <widget class="QLabel" name="label_pic">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>70</y>
-      <width>500</width>
-      <height>500</height>
+      <x>60</x>
+      <y>220</y>
+      <width>381</width>
+      <height>341</height>
      </rect>
     </property>
     <property name="maximumSize">
@@ -235,220 +236,75 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="DimLabel">
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>80</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Blur</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>80</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Negativo</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>80</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Brilho</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
     <property name="geometry">
      <rect>
       <x>570</x>
-      <y>150</y>
-      <width>111</width>
-      <height>51</height>
+      <y>80</y>
+      <width>80</width>
+      <height>24</height>
      </rect>
     </property>
-    <property name="maximumSize">
-     <size>
-      <width>150</width>
-      <height>75</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
     <property name="text">
-     <string>Dimensions:</string>
+     <string>PB</string>
     </property>
    </widget>
-   <widget class="QLabel" name="dims">
+   <widget class="QLabel" name="label_pic_2">
     <property name="geometry">
      <rect>
-      <x>690</x>
-      <y>150</y>
-      <width>141</width>
-      <height>51</height>
+      <x>460</x>
+      <y>210</y>
+      <width>381</width>
+      <height>341</height>
      </rect>
     </property>
     <property name="maximumSize">
      <size>
-      <width>150</width>
-      <height>75</height>
+      <width>500</width>
+      <height>500</height>
      </size>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
     <property name="text">
-     <string>W: 0 H: 0</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="percentDarkLabel">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>200</y>
-      <width>121</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>150</width>
-      <height>75</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Occupancy %:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="pDark">
-    <property name="geometry">
-     <rect>
-      <x>700</x>
-      <y>200</y>
-      <width>121</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>150</width>
-      <height>75</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>0</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="infolabel">
-    <property name="geometry">
-     <rect>
-      <x>590</x>
-      <y>100</y>
-      <width>191</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>200</width>
-      <height>60</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Image Information</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="numBlobsLabel">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>250</y>
-      <width>150</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>150</width>
-      <height>75</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Number of Blobs:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="nBlobs">
-    <property name="geometry">
-     <rect>
-      <x>730</x>
-      <y>250</y>
-      <width>121</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>150</width>
-      <height>75</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>0</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="maxBlobAreaLabel">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>300</y>
-      <width>131</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>150</width>
-      <height>75</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Max Blob Area:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="mBArea">
-    <property name="geometry">
-     <rect>
-      <x>710</x>
-      <y>300</y>
-      <width>121</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>150</width>
-      <height>75</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>0</string>
+     <string/>
     </property>
    </widget>
   </widget>

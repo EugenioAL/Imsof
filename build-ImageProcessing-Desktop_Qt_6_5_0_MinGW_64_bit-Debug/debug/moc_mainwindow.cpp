@@ -8,7 +8,6 @@
 
 #include "../../ImageProcessor-master/mainwindow.h"
 #include <QtCore/qmetatype.h>
-#include <QtCore/QList>
 
 #if __has_include(<QtCore/qtmochelpers.h>)
 #include <QtCore/qtmochelpers.h>
@@ -41,36 +40,14 @@ struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {};
 static constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::stringData(
     "MainWindow",
     "on_pushButton_clicked",
-    "",
-    "findProperties",
-    "QList<int>",
-    "QList<QList<int>>&",
-    "imgArray",
-    "uint&",
-    "rows",
-    "cols",
-    "bfSearch",
-    "QList<int>&",
-    "posn",
-    "explored"
+    ""
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
-    uint offsetsAndSizes[28];
+    uint offsetsAndSizes[6];
     char stringdata0[11];
     char stringdata1[22];
     char stringdata2[1];
-    char stringdata3[15];
-    char stringdata4[11];
-    char stringdata5[19];
-    char stringdata6[9];
-    char stringdata7[6];
-    char stringdata8[5];
-    char stringdata9[5];
-    char stringdata10[9];
-    char stringdata11[12];
-    char stringdata12[5];
-    char stringdata13[9];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSMainWindowENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -78,33 +55,11 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
     {
         QT_MOC_LITERAL(0, 10),  // "MainWindow"
         QT_MOC_LITERAL(11, 21),  // "on_pushButton_clicked"
-        QT_MOC_LITERAL(33, 0),  // ""
-        QT_MOC_LITERAL(34, 14),  // "findProperties"
-        QT_MOC_LITERAL(49, 10),  // "QList<int>"
-        QT_MOC_LITERAL(60, 18),  // "QList<QList<int>>&"
-        QT_MOC_LITERAL(79, 8),  // "imgArray"
-        QT_MOC_LITERAL(88, 5),  // "uint&"
-        QT_MOC_LITERAL(94, 4),  // "rows"
-        QT_MOC_LITERAL(99, 4),  // "cols"
-        QT_MOC_LITERAL(104, 8),  // "bfSearch"
-        QT_MOC_LITERAL(113, 11),  // "QList<int>&"
-        QT_MOC_LITERAL(125, 4),  // "posn"
-        QT_MOC_LITERAL(130, 8)   // "explored"
+        QT_MOC_LITERAL(33, 0)   // ""
     },
     "MainWindow",
     "on_pushButton_clicked",
-    "",
-    "findProperties",
-    "QList<int>",
-    "QList<QList<int>>&",
-    "imgArray",
-    "uint&",
-    "rows",
-    "cols",
-    "bfSearch",
-    "QList<int>&",
-    "posn",
-    "explored"
+    ""
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -116,7 +71,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       11,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       1,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -124,14 +79,10 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   32,    2, 0x08,    1 /* Private */,
-       3,    3,   33,    2, 0x08,    2 /* Private */,
-      10,    5,   40,    2, 0x08,    6 /* Private */,
+       1,    0,   20,    2, 0x08,    1 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
-    0x80000000 | 4, 0x80000000 | 5, 0x80000000 | 7, 0x80000000 | 7,    6,    8,    9,
-    QMetaType::Int, 0x80000000 | 11, 0x80000000 | 5, 0x80000000 | 7, 0x80000000 | 7, 0x80000000 | 5,   12,   13,    8,    9,    6,
 
        0        // eod
 };
@@ -146,19 +97,7 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<MainWindow, std::true_type>,
         // method 'on_pushButton_clicked'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'findProperties'
-        QtPrivate::TypeAndForceComplete<QVector<int>, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QVector<QVector<int>> &, std::false_type>,
-        QtPrivate::TypeAndForceComplete<unsigned int &, std::false_type>,
-        QtPrivate::TypeAndForceComplete<unsigned int &, std::false_type>,
-        // method 'bfSearch'
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QVector<int> &, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QVector<QVector<int>> &, std::false_type>,
-        QtPrivate::TypeAndForceComplete<unsigned int &, std::false_type>,
-        QtPrivate::TypeAndForceComplete<unsigned int &, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QVector<QVector<int>> &, std::false_type>
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
@@ -170,13 +109,10 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         (void)_t;
         switch (_id) {
         case 0: _t->on_pushButton_clicked(); break;
-        case 1: { QList<int> _r = _t->findProperties((*reinterpret_cast< std::add_pointer_t<QList<QList<int>>&>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<uint&>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<uint&>>(_a[3])));
-            if (_a[0]) *reinterpret_cast< QList<int>*>(_a[0]) = std::move(_r); }  break;
-        case 2: { int _r = _t->bfSearch((*reinterpret_cast< std::add_pointer_t<QList<int>&>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QList<QList<int>>&>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<uint&>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<uint&>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<QList<QList<int>>&>>(_a[5])));
-            if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
     }
+    (void)_a;
 }
 
 const QMetaObject *MainWindow::metaObject() const
@@ -198,13 +134,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 1)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 1;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 1)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 3;
+        _id -= 1;
     }
     return _id;
 }
