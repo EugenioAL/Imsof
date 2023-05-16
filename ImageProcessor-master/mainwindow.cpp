@@ -26,7 +26,6 @@ void MainWindow::on_pushButton_clicked()
     if (!file_name.isEmpty()){
 
         //open prompt and display image
-        QMessageBox::information(this, "...", file_name);
         QImage img(file_name);
         QPixmap pix = QPixmap::fromImage(img);
         int w = ui->label_pic->width();

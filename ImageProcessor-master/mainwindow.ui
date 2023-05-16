@@ -58,9 +58,9 @@
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>84</red>
-        <green>98</green>
-        <blue>90</blue>
+        <red>211</red>
+        <green>215</green>
+        <blue>207</blue>
        </color>
       </brush>
      </colorrole>
@@ -105,9 +105,9 @@
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>84</red>
-        <green>98</green>
-        <blue>90</blue>
+        <red>211</red>
+        <green>215</green>
+        <blue>207</blue>
        </color>
       </brush>
      </colorrole>
@@ -143,18 +143,18 @@
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>84</red>
-        <green>98</green>
-        <blue>90</blue>
+        <red>211</red>
+        <green>215</green>
+        <blue>207</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>84</red>
-        <green>98</green>
-        <blue>90</blue>
+        <red>211</red>
+        <green>215</green>
+        <blue>207</blue>
        </color>
       </brush>
      </colorrole>
@@ -190,7 +190,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Load Your Image</string>
+     <string>Carregar Imagem</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
@@ -220,10 +220,10 @@
    <widget class="QLabel" name="label_pic">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>220</y>
-      <width>381</width>
-      <height>341</height>
+      <x>40</x>
+      <y>180</y>
+      <width>401</width>
+      <height>351</height>
      </rect>
     </property>
     <property name="maximumSize">
@@ -291,10 +291,10 @@
    <widget class="QLabel" name="label_pic_2">
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>210</y>
-      <width>381</width>
-      <height>341</height>
+      <x>450</x>
+      <y>180</y>
+      <width>431</width>
+      <height>351</height>
      </rect>
     </property>
     <property name="maximumSize">
@@ -314,7 +314,7 @@
      <x>0</x>
      <y>0</y>
      <width>900</width>
-     <height>21</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>
