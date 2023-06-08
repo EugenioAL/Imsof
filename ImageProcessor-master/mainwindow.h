@@ -19,7 +19,11 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void on_pushButton_2_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
+
+char* onlyPath(char* img_path);
 #endif // MAINWINDOW_H
