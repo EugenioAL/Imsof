@@ -21,8 +21,26 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_pushButton_3_clicked();
+
 private:
     Ui::MainWindow *ui;
+};
+
+class Image
+{
+public:
+    std::string tipo;
+    int width;
+    int height;
+    int maxColor;
+    int *matrix;
+
+    Image(char *arquivo);
+    ~Image();
+    int imageToFile(char* path);
+    int negativo(char *path);
+    int setMatrix();
 };
 
 char* onlyPath(char* img_path);

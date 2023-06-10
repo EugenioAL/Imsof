@@ -55,29 +55,103 @@ char* onlyPath(char* img_path){
     return dir;
 }
 
-int copyImage(char *nome){
-    ofstream entrada;
-    ifstream saida;
-    string line,diretorio = (string)onlyPath(nome) + "copia.ppm";
-    int cont = 0;
-    char* cdir = strToChar(diretorio);
-    cout << diretorio << endl;
-    saida.open(nome);
-    entrada.open(cdir);
-    if(saida.is_open()){
-        while(getline(saida,line))
-        {
-            entrada << line << endl;
-            cont++;
+Image::Image(char* arquivo){
+    ifstream entrada;
+    int i,j,val,celula=0;
+    entrada.open(arquivo);
+    string line,line2, erro;
+    getline(entrada,line);
+    this->tipo = line;
+    getline(entrada,line,' ');
+    this->width = stoi(line);
+    getline(entrada,line);
+    this->height = stoi(line);
+    getline(entrada,line);
+    this->maxColor = stoi(line);
+    matrix = new int[width*height*3];
+    i=0;
+    while(getline(entrada,line)){
+        stringstream ss(line);
+        while(getline(ss,line2,' ')){
+            try {
+                matrix[i] = stoi(line2);
+                i++;
+            } catch (...) {
+            }
         }
     }
-    else{
+    entrada.close();
+}
+
+Image::~Image(){
+
+}
+
+int Image::imageToFile(char *path){
+    int width = this->width;
+    int height = this->height;
+    int maxColorValue = this->maxColor;
+    string caminho = string(path)+"copia.ppm";
+    ofstream outputFile(strToChar(caminho));
+    if (!outputFile) {
+        std::cerr << "Failed to create the output file." << std::endl;
         return 0;
     }
-    cout << endl << cont << endl;
-    entrada.close();
-    saida.close();
 
+    // Write the PPM header
+    outputFile << "P3" << std::endl;
+    outputFile << width << " " << height << std::endl;
+    outputFile << maxColorValue << std::endl;
+    int i,j;
+    // Generate and write the pixel data
+    while(i<height*width*3){
+        if(j!=509){
+            outputFile << matrix[i] << " ";
+            j++;
+        }
+        else{
+            outputFile << matrix[i] << " ";
+            outputFile << endl;
+            j =0;
+        }
+        i++;
+    }
+    outputFile.close();
+    std::cout << "Image generated successfully." << std::endl;
+    return 1;
+}
+
+int Image::negativo(char *path){
+    int width = this->width;
+    int height = this->height;
+    int maxColorValue = this->maxColor;
+    string caminho = string(path)+"copia.ppm";
+    ofstream outputFile(strToChar(caminho));
+    if (!outputFile) {
+        std::cerr << "Failed to create the output file." << std::endl;
+        return 0;
+    }
+
+    // Write the PPM header
+    outputFile << "P3" << std::endl;
+    outputFile << width << " " << height << std::endl;
+    outputFile << maxColorValue << std::endl;
+    int i,j;
+    // Generate and write the pixel data
+    while(i<height*width*3){
+        if(j!=509){
+            outputFile << 255 - matrix[i] << " ";
+            j++;
+        }
+        else{
+            outputFile << matrix[i] << " ";
+            outputFile << endl;
+            j =0;
+        }
+        i++;
+    }
+    outputFile.close();
+    std::cout << "Image generated successfully." << std::endl;
     return 1;
 }
 
@@ -102,22 +176,48 @@ void MainWindow::on_pushButton_clicked()
         int w = ui->label_pic->width();
         int h = ui->label_pic->height();
         ui->label_pic->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
+        ui->label_pic_2->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
     }
 }
-
-
-
-
-
-
 
 void MainWindow::on_pushButton_2_clicked()
 {
     string spath,teste;
     ifstream asd;
+    char* tmp;
     asd.open("path.txt");
-    getline(asd,teste);
-    cout <<"teste " << teste << endl;
+    getline(asd,teste,',');
+    cout << teste << endl;
+    tmp = strToChar(teste);
+    Image imagem(tmp);
+    imagem.imageToFile(onlyPath(tmp));
+    teste = string(onlyPath(tmp))+"copia.ppm";
+    asd.close();
+    QString qpath = QString::fromStdString(teste);
+    if (!qpath.isEmpty()){
+
+        //open prompt and display image
+        QImage img(qpath);
+        QPixmap pix = QPixmap::fromImage(img);
+        int w = ui->label_pic->width();
+        int h = ui->label_pic->height();
+        ui->label_pic_2->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
+    }
+}
+
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    string spath,teste;
+    ifstream asd;
+    char* tmp;
+    asd.open("path.txt");
+    getline(asd,teste,',');
+    cout << teste << endl;
+    tmp = strToChar(teste);
+    Image imagem(tmp);
+    imagem.negativo(onlyPath(tmp));
+    teste = string(onlyPath(tmp))+"copia.ppm";
     asd.close();
     QString qpath = QString::fromStdString(teste);
     if (!qpath.isEmpty()){
