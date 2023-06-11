@@ -23,6 +23,8 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    void on_pushButton_4_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
@@ -40,6 +42,8 @@ public:
     ~Image();
     int imageToFile(char* path);
     int negativo(char *path);
+    int brilho(char *path);
+    int sepia(char *path);
     int setMatrix();
 };
 

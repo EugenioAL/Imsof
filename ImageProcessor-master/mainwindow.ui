@@ -214,7 +214,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Browse...</string>
+     <string>Carregar</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_pic">
@@ -239,23 +239,23 @@
    <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
-      <x>440</x>
+      <x>410</x>
       <y>80</y>
-      <width>80</width>
-      <height>24</height>
+      <width>81</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
-     <string>Blur</string>
+     <string>Sepia</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>320</x>
       <y>80</y>
-      <width>80</width>
-      <height>24</height>
+      <width>81</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
@@ -265,27 +265,14 @@
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>230</x>
       <y>80</y>
-      <width>80</width>
-      <height>24</height>
+      <width>81</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
      <string>Brilho</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_5">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>80</y>
-      <width>80</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PB</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_pic_2">
@@ -307,6 +294,45 @@
      <string/>
     </property>
    </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>90</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Tempo:</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::MarkdownText</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>728</x>
+      <y>95</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>0.0000</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -314,7 +340,7 @@
      <x>0</x>
      <y>0</y>
      <width>900</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
